@@ -6,20 +6,23 @@
 #include <fcntl.h>
 #include <errno.h>
 
+#define		BUFSZ 4096
+
 int main(int argc, char *argv[])
 {
-	int fdin, fdout;
+	int fdout;
 	char buf[BUFSZ];
-	int nb;
+	struct stat st;
 
-	if( argc != 3){
+	if( argc != 2){
 		fprintf(stderr, "usage: mkdir\n");
 	}
 
-	fdin = open(argv[1], O_RDONLY);
-	if(fdin == -1){
+	fdout = open(argv[1], O_CREAT | O_TRUNC | O_DIRECTORY, S_IFDIR);
+	
+	if(fdout == -1){
 		perror("open source");
 		exit(errno);
 	}
 
-	fdout
+}
