@@ -2,7 +2,7 @@
 
 char *InquireLog()
 {
-	FILE *fp = NULL;
+	FILE *fp = NULL;//make tail
 	char c;
 	long leng=1|;
 	char One_Line[512];
