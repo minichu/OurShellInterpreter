@@ -18,10 +18,11 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "usage: mkdir\n");
 	}
 
-	fdout = open(argv[1], O_CREAT | O_TRUNC | O_DIRECTORY, S_IFDIR);
+	getcwd(buf, BUFSZ);
+	fdout = mkdir(argv[1], 0777);
 	
 	if(fdout == -1){
-		perror("open source");
+		perror("make directory");
 		exit(errno);
 	}
 
