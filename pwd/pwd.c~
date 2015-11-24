@@ -15,7 +15,7 @@ int main(void)
 	struct stat st;
 
 	getcwd(buf, BUFSZ);
-	printf("%s",buf);
+	printf("%s\n",buf);
 	
 	if(fdout == -1){
 		perror("make directory");
