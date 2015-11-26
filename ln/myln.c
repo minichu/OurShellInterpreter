@@ -7,16 +7,16 @@ int main(int argc, char *argv[])
 {
 	if(argc!=3)
 	{
-		
+		printf("ERROR: format(./myln <source> <destination>).\n");
 		exit(1);
 	}
 	if(open(argv[1],O_RDWR) < 0)
 	{
-		
+		printf("There is no %s file.\n",argv[1]);
 		exit(1);
 	}
 	if(link(argv[1],argv[2])<0)
-		printf("1");
+		printf("link error.\n");
 	else
-		printf("2");
+		printf("link success!!\n");
 }
