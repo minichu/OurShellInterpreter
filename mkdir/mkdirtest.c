@@ -9,11 +9,10 @@
 #define		BUFSZ 4096
 
 
-int main(int argc, char *argv[])
+mymkdir(int argc, char *argv[])
 {
 	int fdout;
 	char buf[BUFSZ];
-	struct stat st;
 
 	if( argc != 2){
 		fprintf(stderr, "usage: mkdir\n");

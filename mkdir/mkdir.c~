@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	}
 
 	getcwd(buf, BUFSZ);
-	fdout = mkdir(argv[1], 6666);
+	fdout = mkdir(argv[1], 0777);
 	
 	if(fdout == -1){
 		perror("make directory");
