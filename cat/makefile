@@ -1,7 +1,7 @@
 .PHONY: clean
 
 mycat.o: mycat.c
-	gcc -c -g -l../cat mycat.c -o mycat.o
+	gcc -c -g mycat.c -o /home/heeseok/OurShellInterpreter/command/mycat.o
 
 clean:
-	rm -f mycat.o
+	rm -f /home/heeseok/OurShellInterpreter/command/mycat.o
