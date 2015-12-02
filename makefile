@@ -1,4 +1,4 @@
-DIRS = cat mv rm pwd command
+DIRS = cat mv rm pwd ln tail cd cp rmdir tee command
 
 .PHONY:all clean
 
