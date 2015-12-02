@@ -2,9 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include "mymv.h"
 
 #define MAXSIZE		2000
-
+#define	BUFSZ		 4096
 
 
 int getcommand(char *command)
@@ -12,6 +17,8 @@ int getcommand(char *command)
 	int n=0, space_chk=0;
 	char path[MAXSIZE] = {0};
 	char c;
+	char buf[BUFSZ];
+	char *temp;
 	
 	fflush(NULL);
 
@@ -46,13 +53,18 @@ int getcommand(char *command)
 				break;
 		
 			default:
-				printf("input: %s",&c);
 				//fputc(c, stdout);
 				command[n++] = (char)c;
 				break;
 		}
 	}
-	command[n] = '\0';
+	
+	if(strcmp(command, "mv") == 0)
+	{
+		
+	}
+
+	printf("command is %s\n",command);
 
 	if(strlen(command) == 0)
 		return 0;
