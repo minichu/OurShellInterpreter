@@ -1,5 +1,5 @@
-mytail.o: tail.c
-	gcc -c -g tail.c -o ../command/mytail.o
+mytail.o: mytail.c
+	gcc -c -g -I ../include mytail.c -o ../command/mytail.o
 
 
 clean:

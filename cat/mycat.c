@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
+#include "mycat.h"
+
 int main(int argc, char** argv)
 {
         char ch;

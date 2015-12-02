@@ -1,6 +1,6 @@
 
-mymv.o: mv.c
-	gcc -c -g mv.c -o ../command/mymv.o
+mymv.o: mymv.c
+	gcc -c -g -I ../include mymv.c -o ../command/mymv.o
 
 
 clean:
