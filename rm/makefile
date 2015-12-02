@@ -1,6 +1,6 @@
 
 myrm.o: myrm.c
-	gcc -c -g myrm.c -o /home/heeseok/OurShellInterpreter/command/myrm.o
+	gcc -c -g myrm.c -o ../command/myrm.o
 
 clean:
-	rm -f /home/heeseok/OurShellInterpreter/command/myrm.o
+	rm -f ../command/myrm.o

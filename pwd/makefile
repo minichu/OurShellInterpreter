@@ -1,5 +1,5 @@
 mypwd.o: pwd.c
-	gcc -c -g pwd.c -o /home/heeseok/OurShellInterpreter/command/mypwd.o
+	gcc -c -g pwd.c -o ../command/mypwd.o
 
 clean:
-	rm -f /home/heeseok/OurShellInterpreter/command/mypwd.o
+	rm -f ../command/mypwd.o
