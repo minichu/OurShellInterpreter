@@ -6,4 +6,5 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "usage: mkdir\n");
 	}
 	mymkdir(argc, argv);
+	return;
 }

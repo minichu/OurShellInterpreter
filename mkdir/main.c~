@@ -2,5 +2,8 @@
 
 int main(int argc, char *argv[])
 {
-	mymkdir(argv);
+	if( argc != 2){
+		fprintf(stderr, "usage: mkdir\n");
+	}
+	mymkdir(argc, argv);
 }
