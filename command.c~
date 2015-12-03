@@ -325,7 +325,7 @@ void cmd_ln(int ac, char *av[])
 
 
 
-void cmd_pwd()
+void cmd_pwd(int ac, char *av[])
 {
 	int fdout;
 	char buf[BUFSZ];
