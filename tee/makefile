@@ -1,5 +1,5 @@
-mytee.o: tee.c
-	gcc -c -g tee.c -o ../command/mytee.o
+mytee.o: mytee.c
+	gcc -c -g -I ../include mytee.c -o ../command/mytee.o
 
 clean:
 	rm -f ../command/mytee.o

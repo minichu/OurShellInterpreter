@@ -1,6 +1,3 @@
-.PHONY: clean
 
 myls.o: myls.c
-	gcc -c -g myls.c -o /home/heeseok/OurShellInterpreter/command/myls.o
-
-
+	gcc -c -g -I ../include myls.c -o ../command/myls.o

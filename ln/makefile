@@ -1,5 +1,5 @@
 myln.o: myln.c
-	gcc -c -g myln.c -o ../command/myln.o
+	gcc -c -g -I ../include myln.c -o ../command/myln.o
 
 
 clean:

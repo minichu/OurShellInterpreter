@@ -1,5 +1,5 @@
-mycp.o: cp.c
-	gcc -c -g cp.c -o ../command/mycp.o
+mycp.o: mycp.c
+	gcc -c -g -I ../include mycp.c -o ../command/mycp.o
 
 
 clean:

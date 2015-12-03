@@ -1,6 +1,6 @@
 .PHONY: clean
 
-all: pwd mv rm cat ln tail cp rmdir tee cd clear
+all: pwd mv rm cat ln tail cp rmdir tee cd ls clear
 
 pwd: mypwd.o
 	gcc -o pwd mypwd.o
@@ -31,11 +31,12 @@ tee: mytee.o
 
 cd: mycd.o
 	gcc -o cd mycd.o
-
+ls: myls.o
+	gcc -o ls myls.o
 clear:
-	rm mycat.o myrm.o mymv.o mypwd.o myln.o mytail.o mycp.o myrmdir.o mytee.o mycd.o
+	rm mycat.o myrm.o mymv.o mypwd.o myln.o mytail.o mycp.o myrmdir.o mytee.o mycd.o myls.o
 
 clean:
-	rm cat rm mv pwd ln tail cp rmdir tee cd
+	rm cat rm mv pwd ln tail cp rmdir tee cd ls
 
 

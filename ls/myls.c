@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <dirent.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <pwd.h>
-#include <grp.h>
+#include "myls.h"
 
 int main(int argc, char* argv[])
 {
@@ -29,10 +24,9 @@ int main(int argc, char* argv[])
 		while( (direntp = readdir(dirp)) != NULL){
 			if(strcmp(direntp->d_name,".") == 0 || strcmp(direntp->d_name,"..") == 0)
 				continue;
-			printf("%s\t",direntp->d_name);
+			printf("%2s\t",direntp->d_name);
 		}
 		break;
-	case 2:
 	}
 
 	putchar('\n');
@@ -41,7 +35,3 @@ int main(int argc, char* argv[])
 	exit(0);
 }
 
-
-
-
-}
