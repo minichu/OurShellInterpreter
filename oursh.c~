@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include "mymv.h"
 
 #define MAXSIZE		2000
 #define	BUFSZ		 4096
@@ -58,11 +59,9 @@ int getcommand(char *command)
 		}
 	}
 	
-	if(strcmp(command, "cd") == 0)
+	if(strcmp(command, "mv") == 0)
 	{
-		temp = strcat(getcwd(buf, BUFSZ),"/");
-		temp = strcat(temp, command);
-		open(temp);
+		
 	}
 
 	printf("command is %s\n",command);
